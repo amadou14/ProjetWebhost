@@ -3,7 +3,7 @@ name: Deploy website on push
 jobs:
   web-deploy:
     name: Deploy
-    runs-on: ubuntu-lattes 
+    runs-on: ubuntu-latest
     steps:
     - name: Get latest code
       uses: actions/checkout@v3
@@ -12,6 +12,6 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: files.000webhost.com
-        username:keitaamadou2022
-        password: Ak626442459?
+        username: keitaamadou2022
+        password: 
         server-dir : public_html/
